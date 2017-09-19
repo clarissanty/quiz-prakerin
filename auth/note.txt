@@ -1,0 +1,5 @@
+pada folder auth ini kalian buatlah folder :
+ 1. login/login.php
+ 2. register/register.php
+
+ untuk proses lain-lain silahkan buat file seperti yang kalian inginkan, misal register-insert.php atau login-error.php

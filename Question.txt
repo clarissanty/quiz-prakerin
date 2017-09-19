@@ -1,0 +1,10 @@
+Kerjakan aplikasi ini dalam waktu seminggu dimulai pada hari ini hingga tanggal 2 Agustus 2017
+
+Soal & Peraturan:
+	1. Buatlah authentification : login & register
+	2. Pada hari H akan saya periksa
+	3. Selesai tidak selesai tetap akan mendapatkan soal terbaru. Jadi, selesaikanlah tepat waktu supaya tidak menumpuk dengan tugas
+	4. Silahkan bertanya ke https://stackoverflow.com/, Forum FB, atau ke saya
+	5. Aturan bertanya adalah ketika kalian sudah berusaha dan tidak mendapatkan jawaban (Berusahalah dahulu sebelum bertanya, jangan bertanya dulu baru berusaha)
+	6. Dokumentasi penulisan source code ini harus rapi dan jelas maksudnya dan dapat kalian kunjungi untuk example/contoh di https://github.com/oimtrust/crud-oop-mysqli
+	7. Nama aplikasi ini adalah Quiz/ boleh kalian modifikasi sesuka hati. karena nanti akan menjadi portofolio kalian PRAKERIN disini

@@ -1,0 +1,1 @@
+jangan mengubah atau menghapus file .htaccess kecuali apabila kalian paham dengan file .htaccess

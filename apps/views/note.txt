@@ -1,0 +1,1 @@
+Semua tampilan yang dapat dilihat oleh user dapat diatur disini. Jangan sekali-kali membuat suatu proses disini. karena ini hanya untuk tampilan saja. Terkecuali kalian membuat pagination dalam sebuah tabel, atau memang sebuah source logic itu memang diharuskan disini maka diperbolehkan. Apabila masih belum paham silahkan bertanya ke http://oimtrust.com/

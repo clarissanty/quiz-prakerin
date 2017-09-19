@@ -1,0 +1,1 @@
+Di Folder public ini hanya di letakkan file-file asset seperti file CSS, JS, PLUGIN, IMAGE
