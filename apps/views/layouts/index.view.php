@@ -66,12 +66,13 @@
                 </div>
 
                 <?php
-                require_once 'app/model/class.bio.php';
+                require_once 'apps/model/class.auth.php';
  
-                $auth_bio   = new Biodata();
+                $auth   = new Auth();
  
                 //Untuk menampilkan data di tabel
-                $stmt = $auth_bio->runQuery("SELECT * FROM biodata");
+                $stmt = $auth->runQuery("SELECT * FROM tbl_category");
+                $stmt = $auth->runQuery("SELECT * FROM tbl_post");
                 $stmt->execute();
  
                 $result = null;
@@ -79,7 +80,7 @@
                 }
                 else {
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                        $result[]   = "<td>".$row['nama']."</td><td>".$row['phone']."</td><td>".$row['alamat']."</td><td>
+                        $result[]   = "<td>".$row['title_post']."</td><td>".$row['content']."</td><td>".$row['category']."</td><td>
                                         <a class='btn btn-info' href='bio-edit.php?edit_ibio=".$row['id_bio']."'><span class='glyphicon glyphicon-edit'></span> Edit</a>
                                         <a class='btn btn-danger' href='?delete_ibio=".$row['id_bio']."'><span class='glyphicon glyphicon-remove-circle'></span> Delete</a>
                                         </td>";

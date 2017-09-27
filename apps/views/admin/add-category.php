@@ -117,7 +117,7 @@
              
                 <br></br>
                 
-                <form action="<?php $baseUrl; ?>index.php?page=auth&action=proses-category" method="category" name="loginAdmin" id="contactForm" novalidate>
+                <form  action="<?php $baseUrl; ?>index.php?page=auth&action=category" name="category" id="contactForm" novalidate>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Name Category</label>

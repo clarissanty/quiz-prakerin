@@ -38,23 +38,15 @@
             }
             elseif ($action == 'category')
             {
-                require 'admin/category/category.php'; 
+                require 'admin/category.php'; 
             }
             elseif ($action == 'add-post')
             {
                 require 'admin/post/add-post.php';
             } 
-            elseif ($action == 'proses-post')
-            {
-                require 'auth/post/proses-post.php';
-            }
             elseif ($action == 'add-category')
             {
                 require 'admin/category/add-category.php';
-            }
-            elseif ($action == 'proses-category')
-            {
-                require 'auth/category/proses-category.php';
             }
             else
             {
