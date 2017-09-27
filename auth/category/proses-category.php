@@ -4,6 +4,7 @@
 if(!defined('RESTRICTED'))exit('No direct script access allowed!');
 	include_once 'apps/model/class.auth.php';
 	
+	$auth = new Auth();
 
 	if (isset($_POST['btn_insertBio_auth'])) 
 	{
@@ -35,6 +36,13 @@ if(!defined('RESTRICTED'))exit('No direct script access allowed!');
 ?>
 
 
+
+	
+
+ 
+
+ 
+	
 
  
 

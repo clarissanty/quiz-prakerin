@@ -1,3 +1,6 @@
+<?php
+    include "koneksi.php";
+?>
  <!DOCTYPE html>
 <html lang="en">
 
@@ -138,13 +141,24 @@
                     </div>
                     <div class="row control-group">
                         <div>
-                        
+                            <br/>
+                            <label>Category :</label>
+                            <div class="input-field col s6">
+                            <?php 
+                            $result = mysqli_query ($koneksi,"SELECT * FROM tbl_category");
+                            echo '<select name="name_category" class="browser-default"';
+                            echo '<option>---Pilih Category---</option>';
+                            while ($row = mysqli_fetch_array($result)) {
+                            echo '<option value="' . $row['id_category'] . '">' . $row['name_category'] . '</option>';
+                            }
+                            echo '</select>';
+                            ?>
                         </div>
                     </div>
                     <div>
                     <br/>
                         <center>
-                            <button type="submit"  class="btn btn-default">SIMPAN</button>
+                            <button type="submit"  class="btn_insertPost_auth">SIMPAN</button>
                         </center>
                     </div>
                 </form>

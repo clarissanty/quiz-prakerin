@@ -46,7 +46,7 @@
             } 
             elseif ($action == 'proses-post')
             {
-                require 'admin/post/proses-post.php';
+                require 'auth/post/proses-post.php';
             }
             elseif ($action == 'add-category')
             {
@@ -54,7 +54,7 @@
             }
             elseif ($action == 'proses-category')
             {
-                require 'admin/category/proses-category.php';
+                require 'auth/category/proses-category.php';
             }
             else
             {

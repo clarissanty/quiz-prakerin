@@ -22,7 +22,10 @@ class Auth extends Connection
         $result = $this->db->query(
         	"INSERT INTO tbl_category(name_category) VALUES('{$name_category}')");
         }
-	
+	public function insertPost($title_post, $content, $name_category){
+        $result = $this->db->query(
+        	"INSERT INTO tbl_post(title_post, content, name_category) VALUES('{$title_post}', '{$content}', '{$name_category}')");
+        }
 }
 
 ?>

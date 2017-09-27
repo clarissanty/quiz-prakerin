@@ -2,10 +2,10 @@
  <?php
  
 if(!defined('RESTRICTED'))exit('No direct script access allowed!');
-	
-	
+	include_once 'apps/model/class.auth.php';
+	$auth = new Auth();
 
-	if (isset($_POST['btn_create_auth'])) 
+	if (isset($_POST['btn_insertPost_auth'])) 
 	{
 		$title_post = $_POST['title'];
 		$content    = $_POST['posting'];
@@ -24,7 +24,7 @@ if(!defined('RESTRICTED'))exit('No direct script access allowed!');
 		{
 			try 
 			{
-				if ($auth->create($title_post, $content, $category)) {
+				if ($auth->insertPost($title_post, $content, $category)) {
 					
 				}
 				$auth->redirect($baseUrl . 'index.php?page=authh&action=post');
@@ -37,6 +37,15 @@ if(!defined('RESTRICTED'))exit('No direct script access allowed!');
 	}
 	
 	
+	
+	include 'apps/views/admin/post.php';
 	include 'apps/views/layouts/footer.view.php';
 ?>
+	
+	
+	
+
+ 
+
+ 
 	

@@ -107,7 +107,7 @@
                 
                 </div>
                     <hr>
-                    <h2 class="intro-text text-center">Post
+                    <h2 class="intro-text text-center">Category
                         
                     </h2>
                     <hr>

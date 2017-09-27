@@ -145,12 +145,11 @@
                         <tbody>
                         
                             <tr>
-                                <td></td>
-                                <td>
-                                <a href="edit-post.php?id_post=<?php echo $r_tampil['id_post']; ?>" class="btn btn-info"><i class="fa fa-pencil"></i></a>
-                                <a href="delete-post.php?id_post=<?php echo $r_tampil['id_post']; ?>" class="btn btn-danger btn-delete"><i class="fa fa-trash"></i></a>
-                                      
-                                </td>
+                                    <td><?php echo $r_tampil['title_post']; ?></td>
+                                    <td width="150px">
+                                        <a href="edit-post.php?id_post=<?php echo $r_tampil['id_post']; ?>" class="btn btn-info btn-sm">Edit<i class="fa fa-pencil"></i></a>
+                                        <a href="delete-post.php?id_post=<?php echo $r_tampil['id_post']; ?>" class="btn btn-danger btn-sm">Delete<i class="fa fa-trash"></i></a>
+                                    </td>
                             </tr>
                                 
                         </tbody>
