@@ -71,8 +71,8 @@
                 $auth   = new Auth();
  
                 //Untuk menampilkan data di tabel
+
                 $stmt = $auth->runQuery("SELECT * FROM tbl_category");
-                $stmt = $auth->runQuery("SELECT * FROM tbl_post");
                 $stmt->execute();
  
                 $result = null;
@@ -80,16 +80,16 @@
                 }
                 else {
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                        $result[]   = "<td>".$row['title_post']."</td><td>".$row['content']."</td><td>".$row['category']."</td><td>
-                                        <a class='btn btn-info' href='bio-edit.php?edit_ibio=".$row['id_bio']."'><span class='glyphicon glyphicon-edit'></span> Edit</a>
-                                        <a class='btn btn-danger' href='?delete_ibio=".$row['id_bio']."'><span class='glyphicon glyphicon-remove-circle'></span> Delete</a>
+                        $result[]   = "<td>".$row['name_category']."</td><td>
+                                        <a class='btn btn-info' href='edit.php?edit=".$row['id_category']."'><span class='glyphicon glyphicon-edit'></span> Edit</a>
+                                        <a class='btn btn-danger' href='?delete=".$row['id_category']."'><span class='glyphicon glyphicon-remove-circle'></span> Delete</a>
                                         </td>";
                     }
                 }
                 //Eksekusi untuk menghapus data
-                if (isset($_GET['delete_ibio'])) {
+                if (isset($_GET['delete'])) {
                     try {
-                        if ($auth_bio->deleteBio($ibio)) {
+                        if ($auth_bio->delete($ibio)) {
                         $auth_bio->redirect('index.php?deleted');
                         }
                 } catch (PDOException $e) {
@@ -97,10 +97,10 @@
                 }
                 }
                 //Untuk menampilkan view
-                include 'app/view/header.php';
-                include 'app/view/menu.php';
-                include 'app/view/index.php';
-                include 'app/view/footer.php';
+                include 'apps/views/layouts/header.view.php';
+                include 'apps/views/layouts/menu.view.php';
+                include 'apps/views/layouts/index.view.php';
+                include 'apps/views/layouts/footer.view.php';
                 ?>
 
                     <hr>

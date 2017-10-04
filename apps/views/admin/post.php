@@ -138,19 +138,33 @@
                     <table align="center" border="1" width="900px">
                         <thead>
                             <tr>
+                                <th><center>No.</center></th>
                                 <th><center>Title</center></th>
                                 <th><center>Action</center></th>
                             </tr>
                         </thead>
                         <tbody>
-                        
-                            <tr>
-                                    <td><?php echo $r_tampil['title_post']; ?></td>
-                                    <td width="150px">
-                                        <a href="edit-post.php?id_post=<?php echo $r_tampil['id_post']; ?>" class="btn btn-info btn-sm">Edit<i class="fa fa-pencil"></i></a>
-                                        <a href="delete-post.php?id_post=<?php echo $r_tampil['id_post']; ?>" class="btn btn-danger btn-sm">Delete<i class="fa fa-trash"></i></a>
-                                    </td>
-                            </tr>
+                            <?php 
+                                $no = 1;
+
+                                $dataSql = $connect->execute("select * from tbl_post");
+
+                                while ($row = $dataSql->fetch_object()) {
+                                    ?>
+                                        <tr> 
+                                            <td><?php echo $no;?></td>
+                                            <td><?php echo  $row->title_post;?></td>
+                                            <td><?php echo  $row->content;?></td>
+                                            <td><?php echo  $row->id_category;?></td>
+                                            <td width="150px">
+                                                <a href="edit-category.php?id_post=<?php echo $row->id_post; ?>" class="btn btn-info btn-sm">Edit<i class="fa fa-pencil"></i></a>
+                                                <a href="delete-category.php?id_post=<?php echo $row->id_post; ?>" class="btn btn-danger btn-sm">Delete<i class="fa fa-trash"></i></a>
+                                            </td>
+                                        </tr>
+                                    <?php  
+                                    $no++; 
+                                }
+                            ?>                 
                                 
                         </tbody>
         

@@ -2,9 +2,7 @@
  <?php
  
 if(!defined('RESTRICTED'))exit('No direct script access allowed!');
-	include_once 'apps/model/class.auth.php';
 	
-	$auth = new Auth();
 
 	if (isset($_POST['btn_insertBio_auth'])) 
 	{
@@ -21,7 +19,7 @@ if(!defined('RESTRICTED'))exit('No direct script access allowed!');
 				if ($auth->insertBio($name_category)) {
 					
 				}
-				$auth->redirect($baseUrl . 'index.php?page=authh&action=category');
+				$auth->redirect($baseUrl . 'index.php?page=auth&action=category');
 			} 
 			catch (Exception $e) 
 			{

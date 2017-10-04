@@ -137,24 +137,35 @@
                         }
                      ?>
                 </div>
-                <form>
+                <form action="class.connection.php">
                     <table align="center" border="1" width="900px">
                         <thead>
                             <tr>
+                                <th><center>No.</center></th>
                                 <th><center>Name Category</center></th>
                                 <th><center>Action</center></th>
                             </tr>
                         </thead>
                         <tbody>
-                            
-                                <tr>
-                                    <td><?php echo $r_tampil['name_category']; ?></td>
-                                    <td width="150px">
-                                        <a href="edit-category.php?id_category=<?php echo $r_tampil['id_category']; ?>" class="btn btn-info btn-sm">Edit<i class="fa fa-pencil"></i></a>
-                                        <a href="delete-category.php?id_category=<?php echo $r_tampil['id_category']; ?>" class="btn btn-danger btn-sm">Delete<i class="fa fa-trash"></i></a>
-                                    </td>
-                                </tr>
-                            
+                            <?php 
+                                $no = 1;
+
+                                $dataSql = $connect->execute("select * from tbl_category");
+
+                                while ($row = $dataSql->fetch_object()) {
+                                    ?>
+                                        <tr> 
+                                            <td><?php echo $no;?></td>
+                                            <td><?php echo  $row->name_category;?></td>
+                                            <td width="150px">
+                                                <a href="edit-category.php?id_category=<?php echo $row->id_category; ?>" class="btn btn-info btn-sm">Edit<i class="fa fa-pencil"></i></a>
+                                                <a href="delete-category.php?id_category=<?php echo $row->id_category; ?>" class="btn btn-danger btn-sm">Delete<i class="fa fa-trash"></i></a>
+                                            </td>
+                                        </tr>
+                                    <?php  
+                                    $no++; 
+                                }
+                            ?>                            
                         </tbody>
         
                     </table>

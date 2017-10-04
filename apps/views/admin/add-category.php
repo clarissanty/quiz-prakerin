@@ -109,29 +109,32 @@
                     </h2>
                     <hr>
                 </div>
-        <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 
-                <center>(Silakan isi tabel di bawah ini..)</center>
+                        <center>(Silakan isi tabel di bawah ini..)</center>
              
-                <br></br>
+                        <br></br>
                 
-                <form  action="<?php $baseUrl; ?>index.php?page=auth&action=category" name="category" id="contactForm" novalidate>
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Name Category</label>
-                            <input type="text" class="form-control" placeholder="Name category" name="name_category" id="Name_category" required data-validation-required-message="Please enter your name category.">
-                            <p class="help-block text-danger"></p>
+                        <form method="post"   name="category" id="contactForm" >
+                            <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Name Category</label>
+                                <input type="text" class="form-control" placeholder="Name category" name="name_category" id="Name_category" required data-validation-required-message="Please enter your name category.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                            <div>
+                            <br/>
+                                <center>
+                                    <button type="submit" name="btn_insertBio_auth">SIMPAN</button>
+                                </center>
+                            </div>
+                        </form>
                         </div>
                     </div>
-                    <div>
-                    <br/>
-                        <center>
-                            <button type="submit" class="btn_insertBio_auth">SIMPAN</button>
-                        </center>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>

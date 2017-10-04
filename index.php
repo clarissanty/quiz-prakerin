@@ -10,8 +10,10 @@
 
     require 'apps/config/app.php';
     require 'apps/model/class.auth.php';
+    require_once 'apps/model/class.connection.php';
 
     $auth   = new Auth();
+    $connect = new Connection();
 
     //here our routes
     $page   = (!empty($_GET['page'])) ? $_GET['page'] : null;
@@ -38,7 +40,7 @@
             }
             elseif ($action == 'category')
             {
-                require 'admin/category.php'; 
+                require 'admin/category/category.php'; 
             }
             elseif ($action == 'add-post')
             {

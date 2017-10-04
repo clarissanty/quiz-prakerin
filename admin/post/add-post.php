@@ -1,14 +1,12 @@
 <?php
 
 if(!defined('RESTRICTED'))exit('No direct script access allowed!');
-	include_once 'apps/model/class.auth.php';
-	$auth = new Auth();
-
+	
 	if (isset($_POST['btn_insertPost_auth'])) 
 	{
 		$title_post = $_POST['title'];
 		$content    = $_POST['posting'];
-		$category   = $_POST['category'];
+		$category   = $_POST['id_category'];
 	
 		if ($title_post == "") {
 			$error[] 	= "Title post must be filled!";
@@ -26,7 +24,7 @@ if(!defined('RESTRICTED'))exit('No direct script access allowed!');
 				if ($auth->insertPost($title_post, $content, $category)) {
 					
 				}
-				$auth->redirect($baseUrl . 'index.php?page=authh&action=post');
+				$auth->redirect($baseUrl . 'index.php?page=auth&action=post');
 			} 
 			catch (Exception $e) 
 			{
